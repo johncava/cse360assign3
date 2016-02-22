@@ -12,6 +12,9 @@ public class Calculator {
 	//Private integer total holds the final value made from the calculations made 
 	private int total;
 	
+	//Private String variable is initialized with string representation of 0
+	private String history = "0";
+	
 	/**
 	 * @author John Cava
 	 * @param none
@@ -43,6 +46,7 @@ public class Calculator {
 	 */
 	public void add (int value) {
 		total = total + value;
+		history = history + " + " + value;
 	}
 	
 	/**
@@ -54,6 +58,7 @@ public class Calculator {
 	 */
 	public void subtract (int value) {
 		total = total - value;
+		history = history + " - " + value;
 	}
 	
 	/**
@@ -65,6 +70,7 @@ public class Calculator {
 	 */
 	public void multiply (int value) {
 		total = total * value;
+		history = history + " * " + value;
 	}
 	
 	/**
@@ -81,6 +87,7 @@ public class Calculator {
 		else {
 		total = total / value;
 		}
+		history = history + " / " + value;
 	}
 	
 	/**
@@ -91,6 +98,6 @@ public class Calculator {
 	 * Method returns the string representation of the computations made by the Calculator class
 	 */
 	public String getHistory () {
-		return "";
+		return history;
 	}
 }
