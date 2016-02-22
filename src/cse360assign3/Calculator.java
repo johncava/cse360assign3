@@ -31,7 +31,7 @@ public class Calculator {
 	 * Returns the variable total
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**
@@ -42,7 +42,7 @@ public class Calculator {
 	 * An integer variable value is added to the total variable
 	 */
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	
 	/**
@@ -53,7 +53,7 @@ public class Calculator {
 	 * An integer variable value is subtracted from the total variable
 	 */
 	public void subtract (int value) {
-		
+		total = total - value;
 	}
 	
 	/**
@@ -64,7 +64,7 @@ public class Calculator {
 	 * The value of the total variable is multiplied by the integer paramater value
 	 */
 	public void multiply (int value) {
-		
+		total = total * value;
 	}
 	
 	/**
@@ -75,7 +75,12 @@ public class Calculator {
 	 * The value of the total variable is divided by the integer paramater value
 	 */
 	public void divide (int value) {
-		
+		if (value == 0){
+			total = 0;
+		} 
+		else {
+		total = total / value;
+		}
 	}
 	
 	/**
